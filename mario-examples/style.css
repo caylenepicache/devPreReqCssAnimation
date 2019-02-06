@@ -14,7 +14,7 @@ html, body{
 .sky{
   height: 40%;
   background: skyblue;
-  animation: skyChange 30s infinite;
+  animation: skyChange 20s infinite alternate ;
 }
 
 .grass{
@@ -57,8 +57,14 @@ html, body{
   animation-duration: 5s;
   animation-fill-mode: both;
   animation-iteration-count: infinite;
-  animation-direction: reverse;
+  animation-direction: alternate;
   animation-timing-function: linear;
+}
+
+.sun {
+  position: relative;
+  width: 20%;
+  animation: sunChange 20s infinite linear;
 }
 
 .cloud{
@@ -100,10 +106,17 @@ html, body{
 }
 
 @keyframes skyChange{
-  0%   {background:lightskyblue;}
+  0%   {background:orange;}
   25%  {background: skyblue;}
   50%  {background: cornflowerblue;}
-  75%  {background: skyblue;}
-  100% {background:lightskyblue;}
+  75%  {background: darkblue;}
+  100% {background:rgb(1, 1, 63);}
 }
 
+@keyframes sunChange {
+  0%   {opacity: 1;}
+  25%  {opacity:0.75;}
+  50%  {opacity:0.5;}
+  75%  {opacity:0.25;}
+  100% {opacity:0;}
+}
