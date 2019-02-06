@@ -14,6 +14,7 @@ html, body{
 .sky{
   height: 40%;
   background: skyblue;
+  animation: skyChange 30s infinite;
 }
 
 .grass{
@@ -79,6 +80,7 @@ html, body{
 
 
 
+
 /*// KEYFRAMES (controls animation)//*/
 @keyframes drive{
   from{ transform: translateX(-200px)}
@@ -97,5 +99,11 @@ html, body{
   100% {top: -40px;}
 }
 
-
+@keyframes skyChange{
+  0%   {background:lightskyblue;}
+  25%  {background: skyblue;}
+  50%  {background: cornflowerblue;}
+  75%  {background: skyblue;}
+  100% {background:lightskyblue;}
+}
 
